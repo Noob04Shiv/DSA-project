@@ -1,0 +1,40 @@
+Code details:
+
+Header Files and Definitions
+    The code includes necessary header files: stdio.h, stdlib.h, string.h, ctype.h.
+    It defines two constants: DICTIONARY_FILE as the filename of the dictionary file and MAX_WORD_LENGTH as the maximum length 
+    of a word.
+Function loadDictionary
+    loadDictionary is a function responsible for loading words from a dictionary file into memory.
+    It takes a pointer to an integer dictionarySize as an argument to store the size of the loaded dictionary.
+    It opens the dictionary file and counts the number of lines (words) in the file to determine the dictionary size.
+    Memory is dynamically allocated for the dictionary based on the counted size.
+    Words are read from the file and stored in the allocated memory.
+    Finally, it returns the loaded dictionary.
+Function isInDictionary
+    isInDictionary checks if a given word is present in the loaded dictionary.
+    It takes the word to be checked, the dictionary, and the dictionary size as arguments.
+    It iterates through the dictionary and uses strcmp to compare the given word with each word in the dictionary.
+    If a match is found, it returns 1 indicating that the word is in the dictionary; otherwise, it returns 0.
+Function checkSpelling
+    checkSpelling is responsible for checking the spelling of a given text against the loaded dictionary.
+    It takes the input text, the dictionary, and the dictionary size as arguments.
+    It tokenizes the input text using spaces, commas, periods, and newlines as delimiters.
+    Each token is converted to lowercase using tolower for case-insensitive comparison.
+    It then calls isInDictionary to check if the token exists in the dictionary. If not found, it prints "Misspelled word: <word>".
+    If the token is in the dictionary, it prints "correctly Spelled."
+Function main
+    The main function is the entry point of the program.
+    It initializes variables and loads the dictionary by calling loadDictionary.
+    Prompts the user to enter text for spell checking.
+    Calls checkSpelling to check the spelling of the entered text against the loaded dictionary.
+    Frees the memory allocated for the dictionary (both for individual words and the dictionary array itself) before the program ends.
+Flow of Execution
+    Open dictionary file and load words into memory.
+    Prompt the user to input text for spell checking.
+    Check each word in the input text against the loaded dictionary.
+    Print whether each word is correctly spelled or if it's a misspelled word.
+    Free allocated memory.
+    End the program.
+This program is designed to read a dictionary file, tokenize user input, and check if the words in the input are present 
+in the loaded dictionary, printing the spelling status of each word accordingly.

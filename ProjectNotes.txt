@@ -1,0 +1,35 @@
+The algorithm for the provided code is as follows:
+
+1 nclude necessary libraries: stdio.h, stdlib.h, string.h, ctype.h.
+2 Define constants: DICTIONARY_FILE as the filename of the dictionary file and MAX_WORD_LENGTH as the maximum length of a word.
+3 Define functions:
+    :loadDictionary: Opens the dictionary file, counts the number of words (lines) in the file, allocates memory for storing the 
+    dictionary, reads words from the file, and returns the loaded dictionary.
+    :isInDictionary: Checks if a given word is present in the dictionary.
+    :checkSpelling: Tokenizes the input text, converts tokens to lowercase, and checks each token against the dictionary to 
+    determine if it's spelled correctly.
+4 In the main function:
+    :Loads the dictionary using loadDictionary.
+    :Prompts the user to enter text for spell checking.
+    :Calls checkSpelling function to check the spelling of the entered text against the loaded dictionary.
+    :Frees memory allocated for the dictionary.
+
+Algorithm steps:
+
+1 Open the dictionary file.
+2 Count the number of words in the file to determine the dictionary size.
+3 Allocate memory for the dictionary based on the number of words.
+4 Read words from the file into the allocated memory for the dictionary.
+5 Close the dictionary file.
+5 Prompt the user to enter text for spell checking.
+7 Tokenize the input text using spaces, commas, periods, and newlines as delimiters.
+    For each token:
+    a. Convert the token to lowercase.
+    b. Check if the token is in the dictionary:
+    If it's not in the dictionary, print "Misspelled word: <word>".
+    If it's in the dictionary, print "correctly Spelled."
+8 Free the memory allocated for each word in the dictionary and then free the memory for the dictionary itself.
+9 End the program.
+Note: The provided algorithm outlines the basic steps and flow of the code to load the dictionary, check spelling,
+ and manage memory. The code itself reads a dictionary file, tokenizes input text, converts tokens to lowercase, 
+ and checks against the loaded dictionary to determine correct spellings.
